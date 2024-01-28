@@ -5,7 +5,7 @@ const waitAndClickButton = async(page, xpath) => {
     try{
         await page.waitForXPath(fullXPathPermisos)
     }catch(err){
-        console.log(`error ${err} debido a waitForXPath`);
+        console.log(`error debido a waitForXPath`);
     }
     
     const botonPermisos = await page.$x(fullXPathPermisos);
