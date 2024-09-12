@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 const waitAndClickButton = require('./src/waitAndClickButton');
 const descargarAudioMP3 = require('./src/descargarAudio');
 
-const webDirection = 'http://www.youtube.com/playlist?list=PL82bxjpHf6Cw4v9SR-NcV6Z-wlNp7Ou45'
+const webDirection = 'https://www.youtube.com/playlist?list=PL82bxjpHf6Cw56zwi4RcZjxxeiKt0vtVo'
 
 
 const downloadPlayList = async (webDirection) => {
@@ -29,7 +29,7 @@ const downloadPlayList = async (webDirection) => {
 
     let number = 0
     for(const enlace of enlaces){
-        const nameVideo = `video${number}.mp3`
+        const nameVideo = `video${number}.mp4`
         await descargarAudioMP3(enlace, nameVideo)
         number++
     }

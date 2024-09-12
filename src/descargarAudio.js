@@ -5,9 +5,9 @@ const path = require('path');
 async function descargarAudioMP3(enlace, nameVideo) {
     try {
         const rutaDescarga = path.join(__dirname, '../audios', nameVideo);
-        ytdl(enlace, { filter: 'audioonly', quality: 'highestaudio' }).pipe(fs.createWriteStream(rutaDescarga));
+        ytdl(enlace, { filter: 'audioandvideo', quality: 'highest' }).pipe(fs.createWriteStream(rutaDescarga));
     } catch (error) {
-        console.error('Ocurrió un error al descargar el audio en formato mp3:', error);
+        console.error('Ocurrió un error al descargar el audio en formato mp4:', error);
     }
 }
 
